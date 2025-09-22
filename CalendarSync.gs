@@ -114,8 +114,6 @@ function createOrUpdateTargetEvent(sourceEvent, targetEvents, sourceCalendar, ta
     }
   }
   else{
-    //this if statement is most likely not required anymor
-    //if (targetEvent.getTag(CONFIG.metaKeyForID) == sourceEvent.getId()){
       var targetLastUpdateDate = Number(targetEvent.getTag(CONFIG.metaLastUpdated))
       if(sourceEvent.getLastUpdated().getTime() != targetLastUpdateDate){
         console.log("this event needs updating: "+sourceEvent.getTitle())
@@ -131,7 +129,6 @@ function createOrUpdateTargetEvent(sourceEvent, targetEvents, sourceCalendar, ta
         }
       }
     }
- // }
 }
 
 function fillEventFields(sourceEvent, targetEvent, targetCalendar, sourceCalendar, prefix){
